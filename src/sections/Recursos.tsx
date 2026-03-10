@@ -5,7 +5,7 @@ const recursos = [
   {
     title: 'Tao Te Ching Online',
     description: 'Texto completo do Tao Te Ching com múltiplas traduções e comentários.',
-    link: 'https://www.with.org/tao_te_ching_en.pdf',
+    link: 'https://www.dominiopublico.gov.br/download/texto/le000004.pdf',
     icon: BookOpen,
     color: 'var(--tao-sage)',
   },

@@ -136,7 +136,7 @@ const TaoTeChing = () => {
             }`}
           >
             <a
-              href="https://www.with.org/tao_te_ching_en.pdf"
+              href="https://www.dominiopublico.gov.br/download/texto/le000004.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-[var(--tao-sage)] hover:text-[var(--tao-bg)] transition-colors duration-300"
