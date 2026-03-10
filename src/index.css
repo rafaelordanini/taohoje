@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 96%;
+    --foreground: 0 0% 24%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 24%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 24%;
+    --primary: 0 0% 24%;
+    --primary-foreground: 40 20% 96%;
+    --secondary: 40 15% 94%;
+    --secondary-foreground: 0 0% 24%;
+    --muted: 40 10% 90%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 95 10% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 10% 88%;
+    --input: 40 10% 88%;
+    --ring: 95 10% 50%;
+    --radius: 0.5rem;
+    
+    /* Custom Tao Colors */
+    --tao-bg: #f5f3f0;
+    --tao-bg-light: #f9f7f4;
+    --tao-dark: #2c2c2c;
+    --tao-darker: #1a1a1a;
+    --tao-text: #3d3d3d;
+    --tao-text-light: #8c8c8c;
+    --tao-sage: #7d8a74;
+    --tao-terracotta: #b8927a;
+    --tao-blue: #8a9aa8;
+    --tao-gold: #c4b59d;
+    --tao-border: #e0ddd9;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[var(--tao-bg)] text-[var(--tao-text)] antialiased;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+  
+  h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl;
+  }
+  
+  h2 {
+    @apply text-4xl md:text-5xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  .tao-container {
+    @apply w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .tao-section {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+  
+  .tao-btn {
+    @apply inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium tracking-widest uppercase border border-[var(--tao-text)] text-[var(--tao-text)] bg-transparent rounded transition-all duration-300;
+  }
+  
+  .tao-btn:hover {
+    @apply bg-[var(--tao-text)] text-[var(--tao-bg)];
+  }
+  
+  .tao-quote {
+    @apply relative pl-6 border-l-2 border-[var(--tao-sage)];
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+  }
+  
+  .tao-card {
+    @apply bg-white p-8 md:p-10 rounded-lg shadow-sm border border-[var(--tao-border)] transition-all duration-300;
+  }
+  
+  .tao-card:hover {
+    @apply -translate-y-1 shadow-md;
+  }
+  
+  .tao-link {
+    @apply text-[var(--tao-text)] transition-opacity duration-200;
+  }
+  
+  .tao-link:hover {
+    @apply opacity-70;
+  }
+  
+  .tao-label {
+    @apply text-xs font-medium tracking-[0.15em] uppercase text-[var(--tao-text-light)];
+  }
+  
+  .tao-divider {
+    @apply w-16 h-px bg-[var(--tao-border)] my-8;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  
+  .font-body {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--tao-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tao-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tao-text-light);
+}
